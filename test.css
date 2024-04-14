@@ -1,0 +1,37 @@
+body{
+    background-color:cadetblue;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px);
+}
+div div{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-width: 20px;
+    border-style: solid;
+    border-color:violet transparent transparent violet ;
+    transform: rotate(45deg);
+    margin:-9.5px;
+    position: relative;
+}
+div div:nth-child(2){
+    border-color:gray violet violet gray ;
+
+}
+div div:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border-width: 20px;
+    border-style: solid;
+    border-color:transparent gray gray transparent ;
+    z-index: 20;
+    left: -141px;
+    top:100px
+}
